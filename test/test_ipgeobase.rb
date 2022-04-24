@@ -11,9 +11,6 @@ class TestIpgeobase < Minitest::Test
   end
 
   def test_city
-    puts @meta_data.city
-    puts @meta_data.country
-    puts @meta_data.country_code
     assert_equal("Ashburn", @meta_data.city)
     # assert { @meta_data.city == "Ashburn" }
   end
