@@ -3,6 +3,8 @@
 require_relative "ipgeobase/version"
 
 module Ipgeobase
-  class Error < StandardError; end
-  # Your code goes here...
+  autoload :Ipgeo, "ipgeobase/ipgeo"
+  def self.lookup(ip)
+    Ipgeo.new(ip)
+  end
 end
