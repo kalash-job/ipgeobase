@@ -5,3 +5,4 @@ require "ipgeobase"
 
 require "minitest/autorun"
 require "webmock/minitest"
+require "minitest/power_assert"

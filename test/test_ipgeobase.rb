@@ -6,7 +6,7 @@ require_relative "../lib/ipgeobase"
 class TestIpgeobase < Minitest::Test
   def setup
     stub_request(:get, "http://ip-api.com/json/8.8.8.8")
-      .to_return(body: File.new("example_curl_response.json").read, status: 200)
+      .to_return(body: File.read(File.expand_path("../../test/example_curl_response.json", __FILE__)), status: 200)
     @meta_data = Ipgeobase.lookup("8.8.8.8")
   end
 
