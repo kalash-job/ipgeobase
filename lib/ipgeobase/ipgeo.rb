@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Ipgeobase
   require "net/http"
   require "json"

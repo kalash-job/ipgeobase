@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
   spec.summary = "Gem Ipgeobase returns metadata about IP."
   spec.description = "Gem Ipgeobase returns metadata about IP from ip-api.com service."
   spec.homepage = "https://github.com/kalash-job/ipgeobase"
-  spec.required_ruby_version = Gem::Requirement.new('>= 3.0.0')
+  spec.required_ruby_version = Gem::Requirement.new(">= 3.0.0")
 
   spec.metadata["allowed_push_host"] = "https://github.com/kalash-job/ipgeobase"
 
@@ -29,4 +29,7 @@ Gem::Specification.new do |spec|
   spec.bindir = "exe"
   spec.executables = spec.files.grep(%r{\Aexe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
+  spec.add_development_dependency "minitest-power_assert"
+  spec.add_development_dependency "webmock"
+  spec.add_runtime_dependency "rake"
 end
