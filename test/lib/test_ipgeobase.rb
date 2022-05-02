@@ -1,13 +1,15 @@
 # frozen_string_literal: true
 
-require_relative "test_helper"
-require_relative "../lib/ipgeobase"
+require_relative "../test_helper"
 
 class TestIpgeobase < Minitest::Test
+  IP_ADDRESS = "8.8.8.8"
+  FIXTURE_RESPONSE_FILE_PATH = "/fixtures/files/example_curl_response.json"
+
   def setup
-    stub_request(:get, "http://ip-api.com/json/8.8.8.8")
-      .to_return(body: File.read(File.expand_path("../test/example_curl_response.json", __dir__)), status: 200)
-    @meta_data = Ipgeobase.lookup("8.8.8.8")
+    stub_request(:get, "#{Ipgeobase::API_URL}#{IP_ADDRESS}")
+      .to_return(body: File.read("../#{File.dirname(__FILE__)}#{FIXTURE_RESPONSE_FILE_PATH}"), status: 200)
+    @meta_data = Ipgeobase.lookup(IP_ADDRESS)
   end
 
   def test_city

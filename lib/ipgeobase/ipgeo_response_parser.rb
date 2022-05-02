@@ -1,18 +1,13 @@
 # frozen_string_literal: true
 
 module Ipgeobase
-  require "net/http"
   require "json"
 
-  class Ipgeo
+  class IpgeoResponseParser
     attr_reader :city, :country, :country_code, :lon, :lat
 
-    def initialize(ip)
-      uri = URI("http://ip-api.com/json/#{ip}")
-      res = Net::HTTP.get_response(uri)
-      raise "Incorrect response of ip-api.com service" unless res.is_a?(Net::HTTPSuccess)
-
-      ip_meta = JSON.parse(res.body)
+    def initialize(response)
+      ip_meta = JSON.parse(response)
       @city = ip_meta.fetch("city", nil)
       @country = ip_meta.fetch("country", nil)
       @country_code = ip_meta.fetch("countryCode", nil)
