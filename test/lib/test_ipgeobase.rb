@@ -4,11 +4,11 @@ require_relative "../test_helper"
 
 class TestIpgeobase < Minitest::Test
   IP_ADDRESS = "8.8.8.8"
-  FIXTURE_RESPONSE_FILE_PATH = "/fixtures/files/example_curl_response.json"
+  FIXTURE_RESPONSE_FILE_PATH = "/../fixtures/files/example_curl_response.json"
 
   def setup
     stub_request(:get, "#{Ipgeobase::API_URL}#{IP_ADDRESS}")
-      .to_return(body: File.read(File.absolute_path("../#{File.dirname(__FILE__)}#{FIXTURE_RESPONSE_FILE_PATH}")), status: 200)
+      .to_return(body: File.read("#{File.dirname(__FILE__)}#{FIXTURE_RESPONSE_FILE_PATH}"), status: 200)
     @meta_data = Ipgeobase.lookup(IP_ADDRESS)
   end
 
