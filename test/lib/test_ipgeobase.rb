@@ -4,7 +4,7 @@ require_relative "../test_helper"
 
 class TestIpgeobase < Minitest::Test
   IP_ADDRESS = "8.8.8.8"
-  FIXTURE_RESPONSE_FILE_PATH = "/../fixtures/files/example_curl_response.json"
+  FIXTURE_RESPONSE_FILE_PATH = "/../fixtures/files/example_curl_response.xml"
 
   def setup
     stub_request(:get, "#{Ipgeobase::API_URL}#{IP_ADDRESS}")
