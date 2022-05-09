@@ -3,8 +3,10 @@ PATH
   specs:
     ipgeobase (0.1.0)
       addressable
+      minitest-power_assert
       nokogiri-happymapper
       rake
+      webmock
 
 GEM
   remote: https://rubygems.org/

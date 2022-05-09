@@ -15,7 +15,6 @@ gem "nokogiri-happymapper"
 
 gem "rubocop", "~> 1.21"
 
-group :test do
-  gem "minitest-power_assert"
-  gem "webmock"
-end
+gem "minitest-power_assert"
+
+gem "webmock"

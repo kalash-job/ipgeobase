@@ -29,10 +29,10 @@ Gem::Specification.new do |spec|
   spec.bindir = "exe"
   spec.executables = spec.files.grep(%r{\Aexe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
-  spec.add_development_dependency "minitest-power_assert"
-  spec.add_development_dependency "webmock"
   spec.add_runtime_dependency "addressable"
+  spec.add_runtime_dependency "minitest-power_assert"
   spec.add_runtime_dependency "nokogiri-happymapper"
   spec.add_runtime_dependency "rake"
+  spec.add_runtime_dependency "webmock"
   spec.metadata["rubygems_mfa_required"] = "true"
 end
