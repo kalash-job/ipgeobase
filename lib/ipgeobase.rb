@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require_relative "ipgeobase/version"
-require "addressable/uri"
+require "addressable"
 require "net/http"
 
 module Ipgeobase
