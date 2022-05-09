@@ -34,4 +34,5 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency "addressable"
   spec.add_runtime_dependency "nokogiri-happymapper"
   spec.add_runtime_dependency "rake"
+  spec.metadata["rubygems_mfa_required"] = "true"
 end
