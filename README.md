@@ -1,4 +1,5 @@
-![Ipgeobase-Github-Actions](https://github.com/kalash-job/ipgeobase/workflows/Ipgeobase/badge.svg)
+[![Actions Status](https://github.com/kalash-job/ipgeobase/workflows/Ipgeobase/badge.svg)](https://github.com/kalash-job/ipgeobase/actions)
+
 # Ipgeobase
 
 The Ipgeobase gem returns metadata by IP. The gem contains a lookup('8.8.8.8') method that accept an IP address and returns a metadata object.
