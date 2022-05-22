@@ -32,7 +32,6 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency "addressable"
   spec.add_runtime_dependency "minitest-power_assert"
   spec.add_runtime_dependency "nokogiri-happymapper"
-  spec.add_runtime_dependency "rake"
   spec.add_runtime_dependency "webmock"
   spec.metadata["rubygems_mfa_required"] = "true"
 end

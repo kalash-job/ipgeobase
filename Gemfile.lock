@@ -5,7 +5,6 @@ PATH
       addressable
       minitest-power_assert
       nokogiri-happymapper
-      rake
       webmock
 
 GEM
@@ -57,14 +56,11 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
-  addressable
   ipgeobase!
   minitest (~> 5.0)
-  minitest-power_assert
   nokogiri-happymapper
   rake (~> 13.0)
   rubocop (~> 1.21)
-  webmock
 
 BUNDLED WITH
    2.3.10
